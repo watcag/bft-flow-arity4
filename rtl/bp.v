@@ -18,12 +18,12 @@ module shadow_reg_combi
 
    // shadow register
    reg	s_v_r, o_b_r;
-   reg [A_W+D_W-1:0] s_d_r;
+	   reg [A_W+D_W:0] s_d_r;
    always @(posedge clk) begin
-	   if(rst) begin
-		   o_b_r <= 1'b0;
-		   s_v_r <= 1'b0;
-//		   s_d_r <= {D_W{1'b0}};
+		   if(rst) begin
+			   o_b_r <= 1'b0;
+			   s_v_r <= 1'b0;
+			   s_d_r <= 0;
 	   end else begin
 		   o_b_r <= o_b;
 		   if(o_b & !o_b_r & !s_v_r) begin
