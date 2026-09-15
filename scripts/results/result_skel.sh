@@ -1,4 +1,5 @@
 #!/bin/zsh
+set -e
 
 # count metrics for bandwidth
 packets_sent=`wc -l sent.log | cut -d" " -f 1`

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 #########
 TOPO=$2
 N=$3
